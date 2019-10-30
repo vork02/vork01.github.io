@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ComputerWorld</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div id="subtitle">
+
+        <h1>Computers</h1>
+
+        <p>The place where you can learn about computers!</p>
+
+    </div>
+
+    <a href="https://www.facebook.com">
+        <img src="facebook.png" class="fixed">
+    </a>
+    <a href="https://www.twitter.com">
+        <img src="twitter.png" class="fixed1">
+    </a>
+    <div id="wrapper">
+
+        <div id="menu">
+            <ul>
+                <li>
+                    <a class="active" href="#home">
+                        Home Page
+                    </a>
+                </li>
+                <li>
+                    <a href="grafikkort.html">
+                        Graphics Card
+                    </a>
+                </li>
+                <li>
+                    <a href="cpu.html">
+                        CPU
+                    </a>
+                </li>
+                <li>
+                    <a href="motherboard.html">
+                        Motherboard
+                    </a>
+                </li>
+                <li>
+                    <a href="ram.html">
+                        Ram
+                    </a>
+                </li>
+                <li>
+                    <a href="powersupply.html">
+                        Power Supply
+                    </a>
+                </li>
+                <li>
+                    <a href="storage.html">
+                        Storage
+                    </a>
+                </li>
+                <li>
+                    <a href="case.html">
+                        Case
+                    </a>
+                </li>
+                <li>
+                    <a href="video.html">
+                        Video
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+            </ul>
+
+
+
+        </div>
+
+        <div id="subject">
+
+            <h2>Welcome to ComputerWorld</h2>
+
+            <p>Learn how a computer is build!</p>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="AMD_Ryzen_X570_Custom_Gaming_pc.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="7df50a8efbfb63ab67dd8c672511c388.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="AMD_X570_Small_Gaming_Desktop_pc.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="Intel_Z390_Custom_Gaming_3.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="H370_Compact_Custom_Gaming_Desktop.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="AMD_Ryzen_X570_Custom_Quiet_Gaming.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="1.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="Intel_X299_Compact_Gaming_pc.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="Intel_Z390_Custom_Compact_Gaming_1.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="2.png" style="width:100%">
+                </div>
+
+
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000);
+        }
+    </script>
+
+</body>
+
+
+</html>
