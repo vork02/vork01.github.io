@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
@@ -83,8 +82,6 @@
                 </li>
             </ul>
 
-
-
         </div>
 
         <div id="subject">
@@ -136,7 +133,6 @@
                     <img src="2.png" style="width:100%">
                 </div>
 
-
             </div>
             <br>
 
@@ -153,6 +149,7 @@
                 <span class="dot" onclick="currentSlide(9)"></span>
                 <span class="dot" onclick="currentSlide(10)"></span>
             </div>
+            <button onclick="changeColor()" class="test">Background</button>
         </div>
 
     </div>
@@ -171,13 +168,28 @@
             }
             slideIndex++;
 
-            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
             slides[slideIndex - 1].style.display = "block";
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
             dots[slideIndex - 1].className += " active";
             setTimeout(showSlides, 4000);
+        }
+
+        function changeColor() {
+            var element = document.body
+            if (element.classList) {
+                element.classList.toggle("newbackgroundcolor");
+            } else {
+                if (i >= 0)
+                    classes.splice(i, 1);
+                else
+                    classes.push("newbackgroundcolor");
+                element.className = classes.join(" ");
+            }
         }
     </script>
 
